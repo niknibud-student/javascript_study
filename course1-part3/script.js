@@ -1,14 +1,17 @@
 let keys = document.querySelectorAll('.key');
 let clear = document.querySelector('.clear');
 let display = document.querySelector('.display');
-console.log(keys);
-for (key of keys) {
-  key.onClick = fucntion () {
-    //display.textContent += key.textContent;
-    console.log(key);
+//console.log(keys);
+
+for (let key of keys) {
+  key.onclick = function () {
+    display.textContent += key.textContent;
   };
 }
 
+clear.onclick = function () {
+    display.textContent = '';
+}
 /*
 Кнопки с буквами и «пробел» имеют класс key, а дисплей — класс display.
 
