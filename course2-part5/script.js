@@ -1,27 +1,26 @@
 var calculateSumOfDigits = function (number) {
-    var sum = 0;
+  var sum = 0;
 
-    while (number > 0) {
-      sum += number % 10;
-      number = Math.round(number / 10);
+  while (number > 0) {
+    sum += number % 10;
+    number = Math.trunc(number / 10);
+  }
+  return sum;
+}
+
+var getYears = function (startYear, endYear, sumOfDigits) {
+  var years = [];
+
+  for (var i = startYear; i <= endYear; i++) {
+    if (calculateSumOfDigits(i) == sumOfDigits) {
+      years.push(i);
     }
-
-    return sum;
   }
 
-  var getYears = function (startYear, endYear, sumOfDigits) {
-    var years = [];
+  return years;
+}
 
-    for (var i = startYear; i <= endYear; i++) {
-      if (calculateSumOfDigits(i) == sumOfDigits) {
-        years.push(i);
-      }
-    }
-
-    return years;
-  }
-
-  console.log(getYears(2018, 2045, 11));
+console.log(getYears(2018, 2045, 11));
 
   /* Техническое задание
 
