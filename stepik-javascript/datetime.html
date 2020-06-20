@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дата и время</title>
+    <script>
+        weekdays = [ 'Воскресенье', 'Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота'];
+        function testDateTime(a, b) {
+            dateFirst = new Date(a);
+            dateSecond = new Date(b);
+            if (dateFirst > dateSecond) {
+                return weekdays[dateFirst.getDay()];
+            } else {
+                return weekdays[dateSecond.getDay()];
+            }
+        }
+
+        console.log(testDateTime('19 October 1909 10:27', '28 March 1909 00:59'))
+    </script>
+</head>
+<body>
+
+</body>
+</html>
