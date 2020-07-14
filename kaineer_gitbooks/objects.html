@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объекты</title>
+</head>
+
+<body>
+    <script>
+        var book = {
+            name: 'Программирование на JavaScript',
+            type: 'Book'
+        };
+
+        var cat = {
+            name: 'Garphield',
+            likes: 'milk'
+        };
+
+        var isAct = function (obj) {
+            if (obj.name == 'Garphield' || obj.likes == 'milk') {
+                console.log('Объект является настоящим котом!');
+            }
+        };
+
+        isAct(cat);
+    </script>
+</body>
+
+</html>
