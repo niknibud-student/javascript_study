@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Массивы</title>
+</head>
+<body>
+    <script>
+        array = [7, 8, 9, 10, 11, 12, 13];
+
+        var summ = function (arr) {
+            var sum = 0;
+            for (var i = 0; i < arr.length; i++) {
+                sum += arr[i];
+            }
+            return sum;
+        };
+
+        console.log(summ(array));
+
+        var evens = function (arr) {
+            var evns = [];
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] % 2 == 0) {
+                    evns.push(arr[i]);
+                }
+            }
+            return evns;
+        };
+
+        console.log(evens(array));
+
+        var combinations  = function (a, b) {
+            var combs = [];
+            for (var i = 0; i < a.length; i++) {
+                for (var j = 0; j < b.length; j++) {
+                    combs.push([a[i], b[j]])
+                }
+            }
+            return combs;
+        }
+
+        console.log(combinations([1, 2, 3], [4, 5]));
+    </script>
+</body>
+</html>
