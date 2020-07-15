@@ -21,3 +21,24 @@ var isPlain = function (number) {
 
 console.log(isPlain(111));
 console.log(isPlain(53));
+
+/*
+Задача 2. Напишите функцию fib, получающую на вход положительное целое число и возвращающую число фибоначчи с указанным номером. (Первое и второе числа фибоначчи: 1, начиная с третьего, число фибоначчи равно сумме двух предыдущих чисел). Необходимо выполнить задание, используя цикл.
+*/
+
+var fib = function (number) {
+    if (number == 1 || number == 2) {
+        return 1;
+    }
+    var num1 = 1;
+    var num2 = 1;
+    var _fib = 0;
+    for (var i = 3; i <= number; i++) {
+        _fib = num1 + num2;
+        num1 = num2;
+        num2 = _fib;
+    }
+    return _fib;
+}
+
+console.log(fib(7));
