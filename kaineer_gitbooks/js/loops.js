@@ -42,3 +42,18 @@ var fib = function (number) {
 }
 
 console.log(fib(7));
+
+/*
+Задача 3. Напишите функцию digitSumm, вычисляющую сумму цифр числа. Первый параметр функции — number. Для получения цифр используйте операцию получения остатка от деления %.
+*/
+
+var digitSumm = function (number) {
+    var summ = 0;
+    while (number > 0) {
+        summ += number % 10;
+        number = Math.floor(number / 10);
+    }
+    return summ;
+}
+
+console.log(digitSumm(12345));
